@@ -33,6 +33,11 @@ if(empty($_SESSION['login']))
 <input type="button" value="Liste de Planning" onclick=
 "document.location.replace('Liste_Planning.php')">
 	<legend>fin de session</legend>
+	
+<input type="button" value="Ajout d'activite" onclick=
+"document.location.replace('Ajouter_Activite.php')">
+	<legend>fin de session</legend>	
+	
 <input type="button" value="Deconnexion" onclick=
 "document.location.replace('deconnexion.php')">
 	</fieldset>

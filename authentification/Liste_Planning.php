@@ -46,12 +46,12 @@ $reponse = $bdd->query('SELECT * FROM PLANIFIER');
 while ($donnees = $reponse->fetch())
 {
 ?>
-  <option value="activitee :"> <?php echo $donnees['Planning']," ", $donnees['iduser']," ", $donnees['idact']," ", $donnees['JJ/MM/AAAA']," ", $donnees['heure']; ?></option>
+  <option value="Planning :"> <?php echo $donnees['Planning']," ", $donnees['iduser']," ", $donnees['idact']," ", $donnees['JJ/MM/AAAA']," ", $donnees['heure']; ?></option>
 <?php
 }
  
 $reponse->closeCursor();
- 
+
 ?>
 </select>
 </p>

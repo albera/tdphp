@@ -84,9 +84,10 @@ class Auth {
       $this->msg_error = 'mot de passe incorrect';
       return false;
     }
-    
+   
     // stockage dans la session des infos de la base de données
     $_SESSION['login']=$user_input;
+    $_SESSION['idlogin']=$user_input;
     $_SESSION['prec_session_id']=$user['session_id'];
     
     if($user['etat']==1){
