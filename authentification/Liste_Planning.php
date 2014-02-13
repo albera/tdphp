@@ -17,16 +17,37 @@ echo '<p>', htmlspecialchars($message) ,'</p>';
 ?>
 
 <?php
-$bdd = db_connect(); 
- 
+function Username ($a) {
+	$bdd = db_connect(); 
+	$idrequete="SELECT `username` FROM USER where iduser = '".$a."'";
+	$reponse = $bdd -> query( $idrequete );
+	$d = $reponse -> fetch();
+	return $d['username'];
+	
+}
+
+function Activity ($a) {
+	$bdd = db_connect(); 
+	$idrequete1="SELECT `actname` FROM ACTIVITE where idact = '".$a."'";
+	$reponse1 = $bdd -> query( $idrequete1 );
+	$da = $reponse1 -> fetch();
+	return $da['actname'];
+	
+}
+
+
+
+
+ $bdd = db_connect(); 
  
 $reponse = $bdd->query('SELECT * FROM PLANIFIER');
  
 while ($donnees = $reponse->fetch())
-{
-?>
-<?php echo "<li>L'utilisateur ".$donnees['iduser']." a plannifié l'activité ".$donnees['idact']." à la date ".$donnees['JJ/MM/AAAA']." ".$donnees['heure']; ?>
-<?php
+{	
+	$a = Activity ($donnees['idact']);
+	$u = Username ($donnees['iduser']);	
+	
+	echo "<p>".$u." a plannifié l'activité ".$a." à la date ".$donnees['JJ/MM/AAAA']." à ".$donnees['heure']."H</p>";
 }
  
 $reponse->closeCursor();

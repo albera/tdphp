@@ -103,12 +103,9 @@ $id = $reponse -> fetch();
 
 
 if ( !empty($_POST['heure']) && !empty($_POST['date']) && !empty($_POST['activite']) ) {
-$idrequete="SELECT count(*) as nb FROM `PLANIFIER` WHERE `JJ/MM/AAAA`= ".$_POST['date']." and `heure` = ".$_POST['heure']."";
-echo "SELECT count(*) as nb FROM `PLANIFIER` WHERE `JJ/MM/AAAA`= '".$_POST['date']."' and `heure` = '".$_POST['heure']."'";
+$idrequete="SELECT count(*) as nb FROM `PLANIFIER` WHERE `JJ/MM/AAAA`= ".$_POST['date']." and `heure` = ".$_POST['heure'].";";
 $reponse = $connexion -> query( $idrequete );
 $d = $reponse -> fetch();
-if ( $_POST['date'] == '2014-02-01' )
-	echo $d['nb'];
 if ( $d['nb'] != 0 ) { 
 	echo "<p>Il y a déjà une activité prévue dans ces horaires </p>";
 }

@@ -21,6 +21,7 @@ if ( !empty($_POST['username']) && !empty($_POST['password'])) {
 		$stmt ->bindParam (':u',$_POST['username']);
 		$stmt ->bindParam (':p',md5($_POST['password']));
 		$stmt -> execute();
+		echo "<p>Vous êtes enregistrer !</p>";
 	}
 }
 ?>

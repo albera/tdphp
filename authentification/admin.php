@@ -26,17 +26,17 @@ if(empty($_SESSION['login']))
 </head> 
 <body>
 	<fieldset>
-	<legend>ajout_planning</legend>
+	<legend>Ajout Planning</legend>
 <input type="button" value="Ajout de Planning" onclick=
 "document.location.replace('Ajout_Planning.php')">
-	<legend>liste_planning</legend>
+	<legend>Liste Planning</legend>
 <input type="button" value="Liste de Planning" onclick=
 "document.location.replace('Liste_Planning.php')">
-	<legend>fin de session</legend>
+	<legend>Ajouter une activité</legend>
 	
 <input type="button" value="Ajout d'activite" onclick=
 "document.location.replace('Ajouter_Activite.php')">
-	<legend>fin de session</legend>	
+	<legend>Fin de la session</legend>	
 	
 <input type="button" value="Deconnexion" onclick=
 "document.location.replace('deconnexion.php')">
