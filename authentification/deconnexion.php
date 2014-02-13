@@ -17,7 +17,7 @@ if(empty($_SESSION['login']))
    
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <title>deconnexion</title>

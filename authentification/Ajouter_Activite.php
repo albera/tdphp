@@ -2,16 +2,6 @@
 require_once('admin.php');
 require_once('modele.php');
 
-////$dsn="mysql:dbname=".BASE.";host=".SERVER;
-////try
-////{
-  ////$connexion=new PDO($dsn,USER,PASSWD);
-////}
-////catch(PDOException $e){
-  ////printf("echec de la connexion : %s\n", $e->getMessage());
-  ////exit();
-////}
-
 $connexion = db_connect(); 
 
 if ( !empty($_POST['nomact']) ) {

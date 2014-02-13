@@ -17,7 +17,7 @@ if(!empty ($_POST)){
 	$message=$session->Erreur_Message();
       }}?>
 
-<!doctype html>
+<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <title>Formulaire d\'authentification </title>
@@ -44,5 +44,8 @@ echo '<p>', htmlspecialchars($message) ,'</p>';
 </p>
 </fieldset>
 </form> 
+
+<a href = "Ajout_User.php">Ajouter un utilisateur</a>
+
 </body>
 </html>
